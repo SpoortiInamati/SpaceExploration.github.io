@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
+   
+           <svg style="position:absolute;width:0;height:0;">
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix"
+                    values="1 0 0 0 0  
+                            0 1 0 0 0  
+                            0 0 1 0 0  
+                            0 0 0 20 -10" 
+                    result="gooey" />
+                <feBlend in="SourceGraphic" in2="gooey" />
+            </filter>
+        </defs>
+    </svg>
+</head>
+
+<body>
+
+    <!-- PARTICLE BACKGROUND -->
+    <canvas id="spaceParticles"></canvas>
+
+   
+  </div>
+</div>
+    <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container-fluid" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+
+        <!-- LEFT LOGO -->
+        <div class="logo">🚀 SpaceTech</div>
+
+        <!-- RIGHT SIDE HAMBURGER + MENU -->
+        <div style="display:flex; align-items:center; gap:20px;">
+
+            <!-- HIDDEN CHECKBOX -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <!-- HAMBURGER ICON -->
+            <label for="nav-toggle" class="hamburger">
+                ☰
+            </label>
+
+            <!-- MENU LIST -->
+            <ul class="nav-links gooey-nav-container" id="gooeyNav">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#About">About Astrophysics</a></li>
+                <li><a href="#Info">Important Concepts</a></li>
+                <li><a href="#Ref">References</a></li>
+
+                <!-- underline effects -->
+                <span class="effect filter"></span>
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="bg.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-text">
+            <h1>Explore The Infinite Universe</h1>
+            <p>Future belongs to those who explore beyond the stars.</p>
+        </div>
+
+    </section>
+   
+
+<div class="about" id="About">
+
+    <!-- CLEAN MODEL ONLY -->
+    <div class="model">
+  <model-viewer 
+        src="solar_system_animation.glb"
+        class="earth-model"
+        auto-rotate 
+        autoplay      
+        disable-zoom
+        camera-controls="false"
+        interaction-prompt="none"
+        exposure="1.2"
+        shadow-intensity="1.2" style="width: 600px; height: 600px;">
+    </model-viewer>
+
+    </div>
+
+    <!-- GLASS TEXT BOX -->
+    <div class="text glass">
+        <h1 class="heading">What is Astrophysics ?</h1>
+
+        <p class="para1">
+            Astrophysics is the branch of astronomy that applies the principles of physics and chemistry 
+            to understand the universe and its objects, such as stars, planets, and galaxies. It focuses on 
+            the "how" and "why" behind what astronomers observe, using physical laws to explain phenomena 
+            like star formation, black holes, and the origins and evolution of the cosmos. Astrophysicists 
+            use a combination of observational data from telescopes and computational models to develop 
+            theories about the universe.
+
+            Modern astrophysics research grapples with major mysteries, including the nature of dark matter 
+            and dark energy, the mechanisms behind stellar explosions like supernovae, the formation and 
+            evolution of galaxies, and the potential for life on exoplanets.
+        </p>
+    </div>
+
+</div>
+
+    <!-- CARDS SECTION -->
+      <section class="cards" id="Info">
+     <div class="ideas-container py-4 ">
+    <h1 id="heading1" class="text-center mb-4">Important Concepts</h1>
+
+    <div class="row ">
+<div class="main-container">
+  <!-- CARD 1 -->
+<div class="container">
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="space-card h-100">
+
+            <img src="planetary scince.gif" class="card-img-top">
+
+            <div class="card-body">
+                <h2 class="card-title">Planetary Science</h2>
+
+                <button class="btn-card"
+                    onclick="openModal(
+                        'Planetary Science',
+                        'planetary scince.gif',
+                        `Planetary science is the study of planets, moons, asteroids, comets, and all objects and processes within our solar system and beyond. It combines astronomy, geology, chemistry, and physics to uncover how planetary bodies form, change, and evolve.
+
+🪐 What Planetary Science Studies
+Planets
+
+Planetary science explores how planets are built, how they evolve, and why each planet in our solar system is so different.
+Key areas include:
+
+Structure and Composition:
+Planets can be rocky (like Earth and Mars), gas giants (like Jupiter and Saturn), or ice giants (like Uranus and Neptune). Scientists study what they’re made of, from their atmospheres down to their cores.
+
+Atmospheres and Weather Systems:
+This includes studying storms on Jupiter, dust storms on Mars, clouds on Venus, and climate patterns on Earth. Understanding atmospheres helps predict weather and climate evolution.
+
+Magnetic Fields and Internal Cores:
+Some planets generate strong magnetic fields that protect them from solar radiation. Research focuses on how molten cores and internal motion create these fields.
+
+Geological Processes:
+Planetary science compares volcanism, plate tectonics, mountain building, erosion, cratering, and other surface processes across planets.
+
+Formation and Diversity:
+Scientists investigate how planets formed from the solar nebula and why each planet ended up with different sizes, atmospheres, temperatures, and compositions.
+
+Moons
+
+Moons are worlds of their own, and many are geologically active.
+
+Composition and Internal Layers:
+Some moons are rocky, while others are icy with potential subsurface oceans.
+
+Surface Features:
+Craters, frozen plains, active volcanoes (like on Io), and ice cracks (like on Europa) reveal how moons evolve.
+
+Possibility of Life:
+Moons such as Europa and Enceladus may contain liquid oceans beneath their ice crusts, making them prime locations in the search for extraterrestrial life.
+
+Dwarf Planets
+
+Objects like Pluto, Eris, Haumea, and Ceres are smaller planetary bodies that orbit the Sun but are not massive enough to clear their orbits.
+
+They help scientists understand how planets form.
+
+Their compositions (rock–ice mixtures) reveal early solar system conditions.
+
+Ceres may hold water-rich materials, hinting at past or present activity.
+
+Asteroids
+
+Asteroids are rocky leftovers from the solar system’s formation.
+
+They show what the early building blocks of planets were like.
+
+Studying them helps scientists understand collisions, cratering, and solar system evolution.
+
+Some contain metals valuable for future space mining.
+
+Comets
+
+Comets are icy bodies that originate from distant regions like the Kuiper Belt and Oort Cloud.
+
+When they approach the Sun, their ice vaporizes, creating bright tails.
+
+They contain primitive materials from the early solar system, acting like time capsules.
+
+They may have delivered water and organic molecules to early Earth.
+
+🌟 Key Questions of Planetary Science
+
+How did the solar system form and evolve over billions of years?
+
+Could any planets or moons have supported life in the past or present?
+
+What makes Earth special compared to other worlds?
+
+🛰️ Why Planetary Science Matters
+
+It deepens our understanding of Earth’s history and climate.
+
+It supports future human missions by revealing hazards and resources.
+
+It helps track and predict asteroid impact risks that could affect life on Earth.`
+                    )">
+                    View More
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- MODAL -->
+<div id="imgModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">×</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <img id="modalImg" class="modal-img">
+
+        <p id="modalDesc" class="modal-desc"></p>
+    </div>
+
+</div>
+
+
+        <!-- CARD 2 -->
+         
+        
+<div class="container">
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="space-card h-100">
+
+            <img src="deepspace.gif" class="card-img-top">
+
+            <div class="card-body">
+                <h2 class="card-title">Deep Space </h2>
+
+                <button class="btn-card"
+                    onclick="openModal(
+                        'Deep Space',
+                        'deepspace.gif',
+                        `Deep space science is the study of the vast regions beyond our solar system, including stars, galaxies, nebulae, black holes, dark matter, and the large-scale structure of the universe. It combines astronomy, astrophysics, cosmology, and particle physics to understand how the universe began, how it evolves, and what lies beyond the limits of our current exploration.
+                        🌌 What Deep Space Studies
+Interstellar Space
+
+Deep space includes the vast region beyond our solar system, where stars, dust, magnetic fields, and cosmic radiation exist.
+
+Interstellar Medium (ISM):
+A thin mixture of gas and dust that fills the space between stars. Studying the ISM helps scientists understand how stars form and how galaxies evolve.
+
+Cosmic Radiation:
+High-energy particles that travel through space. These affect spacecraft, astronauts, and even the chemistry of planets.
+
+Magnetic Fields:
+Invisible structures that shape the movement of gas and control how stars and planets form.
+
+Stars
+
+Deep space science focuses on how stars are born, live, and die.
+
+Formation:
+Stars form when clouds of gas collapse under gravity.
+
+Life Cycle:
+They evolve through stages like main sequence, red giant, supergiant, or white dwarf.
+
+Stellar Death:
+Some stars explode as supernovae, creating neutron stars or black holes and spreading heavy elements across the galaxy.
+
+Galaxies
+
+Galaxies are huge collections of stars, gas, dust, and dark matter.
+
+Types of Galaxies:
+Spiral (like the Milky Way), elliptical, and irregular galaxies.
+
+Galaxy Formation:
+Deep space observations help understand how galaxies grow and merge.
+
+Dark Matter Influence:
+Invisible matter that shapes galaxy structure and rotation.
+
+Nebulae
+
+Nebulae are giant clouds of gas and dust that glow in beautiful colors.
+
+Star-Forming Nebulae:
+Regions like the Orion Nebula create new stars and planetary systems.
+
+Supernova Remnants:
+These are the leftover cores of exploded stars, such as the Crab Nebula.
+
+Reflection & Emission Nebulae:
+They shine due to nearby starlight or ionized gas.
+
+Exoplanets
+
+Exoplanets are planets orbiting stars outside the solar system.
+
+Detection Methods:
+Transit method (planet passing in front of a star) and radial velocity (star wobble).
+
+Habitability Research:
+Scientists search for planets with water, atmospheres, and temperatures suitable for life.
+
+Variety:
+Hot Jupiters, super-Earths, mini-Neptunes, and Earth-like worlds.
+
+Black Holes
+
+Black holes are regions of space with gravity so intense that even light cannot escape.
+
+Formation:
+Usually created when massive stars collapse.
+
+Accretion Disks:
+Hot swirling material around black holes emits X-rays.
+
+Event Horizon:
+The boundary beyond which nothing can return.
+
+Supermassive Black Holes:
+Found at the centers of galaxies, including our Milky Way.
+
+Dark Matter & Dark Energy
+
+These are mysterious components of the universe.
+
+Dark Matter:
+Invisible mass that holds galaxies together.
+
+Dark Energy:
+A force causing the universe’s expansion to speed up.
+
+Together, they make up 95% of the universe — one of the biggest mysteries in deep space science.
+
+🌟 Key Questions of Deep Space Science
+
+How did the universe begin and what will happen to it in the far future?
+
+How do stars, galaxies, and black holes shape the universe?
+
+Are there other Earth-like planets or alien life beyond our solar system?
+
+What are dark matter and dark energy?
+
+🚀 Why Deep Space Research Matters
+
+Helps us understand the origin and structure of the universe.
+
+Advances technology (telescopes, sensors, spacecraft).
+
+Provides insight into cosmic hazards like radiation or supernovae.
+
+Inspires new frontiers for exploration, such as interstellar travel.`
+                    )">
+                    View More
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- MODAL -->
+<div id="imgModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">×</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <img id="modalImg" class="modal-img">
+
+        <p id="modalDesc" class="modal-desc"></p>
+    </div>
+
+</div>
+
+        <!-- CARD 3 -->
+       <div class="container">
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="space-card h-100">
+
+            <img src="stars.gif" class="card-img-top">
+
+            <div class="card-body">
+                <h2 class="card-title">Star system</h2>
+
+                <button class="btn-card"
+                    onclick="openModal(
+                        'Star system',
+                        'stars.gif',
+                        `Star system science is the study of stars and the collections of planets, moons, asteroids, dust, and gas that orbit them. It combines astronomy, astrophysics, and planetary science to understand how stars form, how their planetary systems develop, and how these systems evolve over time.
+🌟 What Star System Science Studies
+Stars
+
+Star system science explores how stars are born, how they evolve, and how they influence the planets and objects that orbit them.
+Key areas include:
+
+Formation and Early Life:
+
+Stars form when giant clouds of gas and dust collapse under gravity. Studying this process reveals how stellar nurseries create new stars of different sizes and temperatures.
+
+Structure and Composition:
+
+A star contains layers such as the core, radiative zone, convection zone, photosphere, and outer atmosphere. Scientists study how nuclear fusion in the core produces heat, light, and energy.
+
+Life Cycle and Evolution:
+
+Stars change over millions to billions of years—starting as protostars and eventually becoming main-sequence stars, red giants, supergiants, white dwarfs, neutron stars, or black holes.
+
+Stellar Activity:
+
+This includes solar flares, sunspots, stellar winds, and radiation. Stellar activity can affect the orbits, climates, and atmospheres of surrounding planets.
+
+Stellar Types and Diversity:
+
+Stars vary widely—red dwarfs, sun-like stars, blue giants, variable stars, and binary or multiple star systems. Each type forms different kinds of planetary systems.
+
+Planets in Star Systems
+
+Most stars have planets, known as exoplanets, orbiting them.
+
+Planet Formation:
+
+Planets form in rotating disks of gas and dust around young stars. These disks determine how many planets form, how big they are, and what materials they contain.
+
+Orbital Patterns:
+
+Star systems can have stable or chaotic orbits, depending on the star’s mass and other nearby planets or companion stars.
+
+Habitability:
+
+Researchers study which planets lie in the “habitable zone,” where temperatures allow liquid water—an essential condition for life.
+
+Moons, Asteroids, and Dust
+
+Star systems also contain many smaller bodies.
+
+Moons:
+
+Exomoons may orbit exoplanets, influencing tides, climates, and stability, though detecting them is challenging.
+
+Asteroids and Debris Belts:
+
+Many star systems have asteroid belts, debris disks, or rings of leftover materials. These reveal how the system formed and evolved.
+
+Cosmic Dust:
+
+Dust around stars scatters light and helps identify planetary systems. It also contains the building blocks of new planets.
+
+Binary and Multiple Star Systems
+
+Many stars form systems with two or more stars.
+
+These systems can host planets that orbit one star (S-type) or both stars together (P-type).
+
+Studying them helps scientists understand how gravity shapes planetary stability and formation.
+
+🌟 Key Questions of Star System Science
+
+How do stars and their planetary systems form and evolve over time?
+
+What kinds of planets exist around other stars, and how common are Earth-like worlds?
+
+How do stellar processes affect the habitability of planets?
+
+How do binary and multiple star systems influence planetary orbits and stability?
+
+🌠 Why Star System Science Matters
+
+It helps us understand how common planetary systems like our own are in the universe.
+
+It reveals whether other stars might host planets capable of supporting life.
+
+It provides insight into how stars influence the climates and atmospheres of their planets.
+
+It expands our knowledge about the diversity of worlds and star types in the cosmos.`
+                    )">
+                    View More
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- MODAL -->
+<div id="imgModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">×</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <img id="modalImg" class="modal-img">
+
+        <p id="modalDesc" class="modal-desc"></p>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+ <section id="Ref">
+
+
+    <div class="card2  my-4 p-4" >
+
+ <h1 >📄 References</h1>
+        <h3 class="text-center mb-5 fw-bold">
+            Authoritative References for Planetary Science, Deep Space Exploration, and Star Systems
+        </h3>
+
+        <p class="text-center mb-4">
+            Includes academic journals, foundational textbooks, and planetary data archives from NASA and ESA. 
+           
+        </p>
+   <h3 class="card-title">📘 Academic Journals</h3>
+                        <p class="card-text">Peer-reviewed journals essential for updated planetary science research:</p>
+                        <ul>
+                            <li><strong>Icarus</strong> – Premier journal for solar system studies</li>
+                            <li><strong>Planetary and Space Science</strong></li>
+                            <li><strong>Advances in Space Research</strong></li>
+                            <li><strong>JGR: Planets</strong></li>
+                            <li><strong>Annual Review of Earth and Planetary Sciences</strong></li>
+                        </ul>
+  <h3 class="card-title">📚 Foundational Books</h3>
+                        <p class="card-text">Excellent references for introductory and advanced study:</p>
+                        <ul>
+                            <li><strong>Encyclopedia of the Solar System</strong></li>
+                            <li><strong>Handbook of Exoplanets</strong></li>
+                            <li><strong>Introductory Notes on Planetary Science</strong></li>
+                            <li><strong>The Cambridge Guide to the Solar System</strong></li>
+                            <li><strong>Deep Space Chronicle</strong></li>
+                        </ul>
+<h3 class="card-title">🌐 Online Resources</h3>
+                        <p class="card-text">Official archives and scientific data repositories:</p>
+                        <ul>
+                            <li><strong>NASA Planetary Science Resources</strong></li>
+                            <li><strong>Planetary Data System (PDS)</strong></li>
+                            <li><strong>ESA Planetary Science Archive</strong></li>
+                            <li><strong>National Academies Decadal Surveys</strong></li>
+                            <li><strong>HyperPhysics & Weisstein Astronomy</strong></li>
+                        </ul>
+<p class="text">
+  <ol class="small mt-3">
+                            <li>https://www.sciencedirect.com/topics/physics-and-astronomy/deep-space</li>
+                            <li>https://libguides.mit.edu/c.php?g=175941&p=1159561</li>
+                            <li>https://www.sciencedirect.com/journal/planetary-and-space-science/publish/guide-for-authors</li>
+                            <li>https://countryofpapers.com/search-journals/top-15-journals-space-and-planetary-science</li>
+                            <li>https://dps.aas.org/history/chamberlain_cruikshank_1999/</li>
+                            <li>https://guides.library.yale.edu/planetary-sciences/reference-links</li>
+                            <li>https://science.nasa.gov/resource/deep-space-chronicle-a-chronology-of-deep-space-and-planetary-probes-1958-2000/</li>
+                            <li>https://guides.library.yale.edu/planetary-sciences/reference-links</li>
+                            <li>https://solarsystem.nasa.gov/bibliography/</li>
+                            <li>https://www.nationalacademies.org/read/26522/chapter/22</li>
+                            <li>https://www.nationalacademies.org/read/26522/chapter/3</li>
+                            <li>https://science.nasa.gov/planetary-science/resources/</li>
+                            <li>https://science.nasa.gov/exoplanets/</li>
+                            <li>https://atmos.nmsu.edu/IPDA/esa.html</li>
+                        </ol>
+  </p>
+  </h2>
+</div>
+
+ </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module">
+const viewer = document.querySelector("model-viewer");
+
+viewer.addEventListener("load", () => {
+    const sun = viewer.model.scene.getObjectByName("Sun");
+
+    const earth = viewer.model.scene.getObjectByName("Earth");
+    const mars = viewer.model.scene.getObjectByName("Mars");
+    const venus = viewer.model.scene.getObjectByName("Venus");
+
+    let angleEarth = 0, angleMars = 0, angleVenus = 0;
+
+    function animate() {
+        // Earth orbit
+        angleEarth += 0.01;
+        earth.position.x = Math.cos(angleEarth) * 2.5;
+        earth.position.z = Math.sin(angleEarth) * 2.5;
+
+        // Mars orbit
+        angleMars += 0.008;
+        mars.position.x = Math.cos(angleMars) * 3.5;
+        mars.position.z = Math.sin(angleMars) * 3.5;
+
+        // Venus orbit
+        angleVenus += 0.015;
+        venus.position.x = Math.cos(angleVenus) * 1.8;
+        venus.position.z = Math.sin(angleVenus) * 1.8;
+
+        viewer.requestRender();  
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+});
+</script>
+
+<script src="gooey-nav.js"></script>
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
